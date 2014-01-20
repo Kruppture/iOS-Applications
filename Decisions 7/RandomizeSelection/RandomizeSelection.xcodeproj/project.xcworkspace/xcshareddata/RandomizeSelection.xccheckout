@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6E25E27B-8F40-4BBC-91CF-B3C299B45858</string>
+	<key>IDESourceControlProjectName</key>
+	<string>RandomizeSelection</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C7951C4D-6341-4354-9AE4-7A23AE36221E</key>
+		<string>https://github.com/Kruppture/iOS-Applications.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Decisions 7/RandomizeSelection/RandomizeSelection.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C7951C4D-6341-4354-9AE4-7A23AE36221E</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Kruppture/iOS-Applications.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C7951C4D-6341-4354-9AE4-7A23AE36221E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C7951C4D-6341-4354-9AE4-7A23AE36221E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOS-Applications</string>
+		</dict>
+	</array>
+</dict>
+</plist>
