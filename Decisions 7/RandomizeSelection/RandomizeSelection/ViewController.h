@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController <UITextFieldDelegate> {
-    //IBOutlet UIScrollView *scroller;
+  
+    //Initiallize all the text fields
     
     IBOutlet UITextField *textf1;
     IBOutlet UITextField *textf2;
@@ -21,7 +22,7 @@
     IBOutlet UITextField *textf8;
     IBOutlet UILabel *answerbut;
     IBOutlet UIButton *screenTouch;
-    //IBOutlet UIBarButtonItem *clear;
+  
    
     
 }
