@@ -182,7 +182,7 @@
     if ([segue.identifier isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         DetailViewController *destViewController = segue.destinationViewController;
-        
+        NSLog(@"hi");
     }
 }
 
