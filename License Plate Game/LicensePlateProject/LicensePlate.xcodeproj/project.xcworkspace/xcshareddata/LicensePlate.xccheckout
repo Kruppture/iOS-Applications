@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2C2506CD-4E8D-4F38-9124-79EF40404CEB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>LicensePlate</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>94722361-04C4-473F-83A7-C14191543B75</key>
+		<string>https://github.com/Kruppture/iOS-Applications.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>License Plate Game/LicensePlateProject/LicensePlate.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>94722361-04C4-473F-83A7-C14191543B75</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Kruppture/iOS-Applications.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>94722361-04C4-473F-83A7-C14191543B75</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>94722361-04C4-473F-83A7-C14191543B75</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOS-Applications</string>
+		</dict>
+	</array>
+</dict>
+</plist>

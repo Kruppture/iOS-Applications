@@ -76,6 +76,12 @@
 
 -(IBAction)button {
     
+   
+    //I should stick them all into an array, then have an if statement
+    //that says if the text is not empty, add it to another array, then
+    //after the button press, randomize that
+    
+    
     
     int text = arc4random() % 8;
     switch (text) {
