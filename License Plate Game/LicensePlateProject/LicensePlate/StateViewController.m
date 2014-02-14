@@ -112,7 +112,7 @@
     
     if ([[checked objectAtIndex:indexPath.row] isEqualToString:@"YES"]) {
      
-        cell.contentView.backgroundColor = [UIColor colorWithRed:(52/255.0) green:(152/255.0) blue:(219/255.0) alpha:.8];
+        cell.contentView.backgroundColor = [UIColor colorWithRed:(26/255.0) green:(188/255.0) blue:(156/255.0) alpha:.65];
       
     } else {
        
@@ -127,7 +127,7 @@
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
 
     if ([[checked objectAtIndex:indexPath.row] isEqualToString:@"NO"]) {
-                cell.contentView.backgroundColor = [UIColor colorWithRed:(52/255.0) green:(152/255.0) blue:(219/255.0) alpha:.8];
+                cell.contentView.backgroundColor = [UIColor colorWithRed:(46/255.0) green:(210/255.0) blue:(113/255.0) alpha:.9];
         
         [checked replaceObjectAtIndex:indexPath.row withObject:[NSString stringWithFormat:@"YES"]];
         [self titleCountMethod];
