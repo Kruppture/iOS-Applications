@@ -40,8 +40,10 @@
     
     self.managedObjectContext = appDelegate.managedObjectContext;
     
+
+    
     [self setNeedsStatusBarAppearanceUpdate];
-    [self.tableView setSeparatorColor:[UIColor lightGrayColor]];
+    [self.tableView setSeparatorColor:[UIColor grayColor]];
     [self.tableView setSeparatorInset:UIEdgeInsetsZero];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(saveData:) name:UIApplicationDidEnterBackgroundNotification object:nil];
@@ -58,10 +60,7 @@
     tacoCount = 50;
     [self titleCountMethod];
  
-       UISwipeGestureRecognizer *g = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(cellWasSwiped:)];
-   
-    [g setDirection:(UISwipeGestureRecognizerDirectionLeft)];
-        [self.tableView addGestureRecognizer:g];
+ 
 }
     
     
@@ -87,15 +86,28 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *simpleTableIdentifier = @"NameCell";
-    
+ 
     UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+    self.longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPressGestures:)];
+    self.longPressGestureRecognizer.numberOfTouchesRequired = 1;
+    
+    /* Maximum 100 points of movement allowed before the gesture
+     is recognized */
+    self.longPressGestureRecognizer.allowableMovement = 100.0f;
+    /* The user must press 2 fingers (numberOfTouchesRequired) for
+     at least 1 second for the gesture to be recognized */
+    self.longPressGestureRecognizer.minimumPressDuration = 1;
+    
+       /* Add this gesture recognizer to our view */
+   [cell addGestureRecognizer:self.longPressGestureRecognizer];
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
-        
-     
+      
     }
     
+  
     
     
     //assigns the state names to the cells
@@ -120,6 +132,18 @@
     }
     
     return cell;
+}
+
+- (void) handleLongPressGestures:(UILongPressGestureRecognizer *)gesture{
+    
+    if (gesture.state == UIGestureRecognizerStateBegan) {
+        UITableViewCell *cell = (UITableViewCell *)[gesture view];
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+        NSString *s = [NSString stringWithFormat:@"row is %ld",(long)indexPath.row];
+        NSLog(@"%@", s);
+       // UIStoryboardSegue *detailSegue = [[UIStoryboardSegue alloc] initWithIdentifier:detailSegue source:self destination:DetailViewController];
+       // [self performSegueWithIdentifier:detailSegue sender:sender];
+    }
 }
 
 //decides whether to add a checkmark or take away.

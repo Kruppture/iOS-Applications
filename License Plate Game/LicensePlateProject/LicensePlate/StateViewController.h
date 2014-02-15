@@ -21,6 +21,7 @@
 
 -(void)saveData:(NSNotification *)notification;
 
+@property (strong, nonatomic) IBOutlet UILongPressGestureRecognizer *longPressGestureRecognizer;
 
 -(void)cellWasSwiped:(UIGestureRecognizer *)g;
 @end

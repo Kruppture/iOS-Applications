@@ -10,4 +10,9 @@
 
 @interface MainViewController : UIViewController 
 
+- (IBAction)alaskaSwitch:(id)sender;
+- (IBAction)hawaiiSwitch:(id)sender;
+
+- (IBAction)resetButton:(id)sender;
+
 @end

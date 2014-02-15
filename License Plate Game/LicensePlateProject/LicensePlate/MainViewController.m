@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 
+
 @interface MainViewController ()
 
 @end
@@ -41,4 +42,15 @@
 
 
 
+- (IBAction)alaskaSwitch:(id)sender {
+    NSLog(@"taco");
+    
+    
+}
+
+- (IBAction)hawaiiSwitch:(id)sender {
+}
+
+- (IBAction)resetButton:(id)sender {
+}
 @end

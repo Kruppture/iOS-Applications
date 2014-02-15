@@ -38,6 +38,7 @@
 		BBD73B2F177CD88D00116383 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBD73B2D177CD88D00116383 /* InfoPlist.strings */; };
 		BBD73B31177CD88D00116383 /* LicensePlateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD73B30177CD88D00116383 /* LicensePlateTests.m */; };
 		BBE2238F18ADC2B4004A60F8 /* blueimage.png in Resources */ = {isa = PBXBuildFile; fileRef = BBE2238E18ADC2B4004A60F8 /* blueimage.png */; };
+		BBE2239118ADC40F004A60F8 /* examplecell.png in Resources */ = {isa = PBXBuildFile; fileRef = BBE2239018ADC40F004A60F8 /* examplecell.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		BBD73B2E177CD88D00116383 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BBD73B30177CD88D00116383 /* LicensePlateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LicensePlateTests.m; sourceTree = "<group>"; };
 		BBE2238E18ADC2B4004A60F8 /* blueimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueimage.png; sourceTree = "<group>"; };
+		BBE2239018ADC40F004A60F8 /* examplecell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = examplecell.png; path = "Icon Files/examplecell.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,9 +201,11 @@
 		BBD73B0B177CD88D00116383 /* LicensePlate */ = {
 			isa = PBXGroup;
 			children = (
+				BBE2239218ADC7D3004A60F8 /* iPad */,
 				BBD73B14177CD88D00116383 /* AppDelegate.h */,
 				BBD73B15177CD88D00116383 /* AppDelegate.m */,
 				BBD73B17177CD88D00116383 /* Main.storyboard */,
+				BBE2239018ADC40F004A60F8 /* examplecell.png */,
 				BBE2238E18ADC2B4004A60F8 /* blueimage.png */,
 				BB22720817886C4400590DA3 /* Main View */,
 				BB22720717886C2400590DA3 /* Table View */,
@@ -240,6 +244,13 @@
 				BBD73B2D177CD88D00116383 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BBE2239218ADC7D3004A60F8 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +343,7 @@
 				BB6A79B518AC4FDE00438124 /* License Plate Icon.psd in Resources */,
 				BB6A79B818AC4FDE00438124 /* plategameicon.psd in Resources */,
 				BBD73B10177CD88D00116383 /* InfoPlist.strings in Resources */,
+				BBE2239118ADC40F004A60F8 /* examplecell.png in Resources */,
 				BBD73B19177CD88D00116383 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,7 +495,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LicensePlate/LicensePlate-Prefix.pch";
 				INFOPLIST_FILE = "LicensePlate/LicensePlate-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -496,7 +510,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LicensePlate/LicensePlate-Prefix.pch";
 				INFOPLIST_FILE = "LicensePlate/LicensePlate-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
