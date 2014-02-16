@@ -209,6 +209,7 @@
                         <outlet property="stateCountLabel" destination="0nC-te-iJP" id="xrM-HW-0c4"/>
                         <outlet property="statesLeftLabel" destination="MkU-et-vFY" id="qhr-YL-BjR"/>
                         <outlet property="tableView" destination="34s-Kl-5Kt" id="Xtm-sS-jHR"/>
+                        <segue destination="OtS-19-HX5" kind="modal" identifier="DestSegue" id="LkK-jT-bDA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j32-06-W4s" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -228,54 +229,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQC-XP-kXi">
-                                <rect key="frame" x="168" y="150" width="34" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blueimage.png" translatesAutoresizingMaskIntoConstraints="NO" id="8ec-Es-6rm">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="back">
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQC-XP-kXi">
+                                <rect key="frame" x="8" y="26" width="48" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="35"/>
+                                <state key="normal" title="&lt;">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="r8T-Qz-nbu" kind="modal" modalTransitionStyle="coverVertical" id="Del-Gu-2jy"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyj-Ag-3JQ">
-                                <rect key="frame" x="122" y="257" width="42" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="California" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyj-Ag-3JQ">
+                                <rect key="frame" x="77" y="28" width="168" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CaliforniaMain.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xqj-Cw-2oh">
+                                <rect key="frame" x="20" y="91" width="280" height="203"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blueimage.png" translatesAutoresizingMaskIntoConstraints="NO" id="IT6-Hf-urh">
+                                <rect key="frame" x="20" y="294" width="280" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blueimage.png" translatesAutoresizingMaskIntoConstraints="NO" id="ENi-6a-fn7">
+                                <rect key="frame" x="20" y="430" width="280" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CaliforniaPlate.png" translatesAutoresizingMaskIntoConstraints="NO" id="Arf-8y-1V1">
+                                <rect key="frame" x="63" y="314" width="196" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CaliforniaFlag.png" translatesAutoresizingMaskIntoConstraints="NO" id="A7n-h1-IhJ">
+                                <rect key="frame" x="66" y="441" width="190" height="119"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="gho-ce-Hs8"/>
                     <connections>
-                        <outlet property="testLabel" destination="vyj-Ag-3JQ" id="jyo-vq-MRS"/>
+                        <outlet property="testLabelTaco" destination="vyj-Ag-3JQ" id="OAG-Fd-0h2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lwv-4u-F8y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1274" y="6"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="ENB-Gp-C93">
-            <objects>
-                <viewController id="T4X-vK-CNe" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="EqG-zR-Liv"/>
-                        <viewControllerLayoutGuide type="bottom" id="Hka-dG-kNR"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="6HK-zW-wHe">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wJY-qy-lu0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
+            <point key="canvasLocation" x="1199" y="6"/>
         </scene>
     </scenes>
     <resources>
+        <image name="CaliforniaFlag.png" width="380" height="238"/>
+        <image name="CaliforniaMain.png" width="560" height="406"/>
+        <image name="CaliforniaPlate.png" width="392" height="198"/>
         <image name="blueimage.png" width="1024" height="1024"/>
         <image name="examplecell.png" width="640" height="111"/>
         <image name="gear.png" width="144" height="144"/>

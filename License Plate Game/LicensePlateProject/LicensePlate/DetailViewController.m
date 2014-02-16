@@ -13,8 +13,11 @@
 
 @end
 
-@implementation DetailViewController
+@implementation DetailViewController{
+    NSArray *nameArray;
+}
 
+@synthesize passDataTest;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -30,6 +33,11 @@
 {
     [super viewDidLoad];
     
+    nameArray = [NSArray arrayWithObjects:@"Alabama", @"Alaska",@"Arizona", @"Arkansas", @"California", @"Colorado", @"Connecticut", @"Deleware", @"Florida", @"Georgia", @"Hawaii", @"Idaho", @"Illinois", @"Indiana", @"Iowa", @"Kansas", @"Kentucky", @"Louisiana", @"Maine", @"Maryland", @"Massachussets", @"Michigan", @"Minnesota", @"Mississippi", @"Missouri", @"Montana", @"Nebraska", @"Nevada", @"New Hampshire", @"New Jersey", @"New Mexico", @"New York", @"North Carolina", @"North Dakota", @"Ohio", @"Oklahoma", @"Oregon", @"Pennyslvania", @"Rhode Island", @"South Carolina", @"South Dakota", @"Tennessee", @"Texas", @"Utah", @"Vermont", @"Virginia", @"Washington", @"West Virginia", @"Wisconsin", @"Wyoming", nil];
+    
+    //NSString *test = [];
+   [_testLabelTaco setText:passDataTest];
+    NSLog(@"view loaded");
   
 	// Do any additional setup after loading the view.
 }

@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface DetailViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UILabel *testLabel;
+
+@property (strong, nonatomic) IBOutlet UILabel *testLabelTaco;
+@property (strong,nonatomic) NSString *passDataTest;
 
 @end

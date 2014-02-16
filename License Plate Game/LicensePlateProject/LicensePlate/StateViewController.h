@@ -24,4 +24,7 @@
 @property (strong, nonatomic) IBOutlet UILongPressGestureRecognizer *longPressGestureRecognizer;
 
 -(void)cellWasSwiped:(UIGestureRecognizer *)g;
+
+@property (nonatomic, strong) NSString *superTest;
+
 @end

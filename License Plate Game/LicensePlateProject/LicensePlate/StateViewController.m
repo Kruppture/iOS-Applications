@@ -27,6 +27,8 @@
     int tacoCount;
     int finalCount;
     
+    NSString *rowIs;
+    
 }
 
 @synthesize tableView = _tableView;
@@ -36,6 +38,7 @@
 {
     [super viewDidLoad];
     
+ 
     AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
     
     self.managedObjectContext = appDelegate.managedObjectContext;
@@ -47,9 +50,11 @@
     [self.tableView setSeparatorInset:UIEdgeInsetsZero];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(saveData:) name:UIApplicationDidEnterBackgroundNotification object:nil];
+    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(saveData:) name:<#(NSString *)#> object:<#(id)#>]
     
     if ([[NSFileManager defaultManager] fileExistsAtPath:[self plistPath]]){
         checked = [[NSMutableArray alloc] initWithContentsOfFile:[self plistPath]];
+        
     } else {
             checked = [NSMutableArray arrayWithObjects:@"NO", @"NO",@"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", nil];
     
@@ -134,17 +139,6 @@
     return cell;
 }
 
-- (void) handleLongPressGestures:(UILongPressGestureRecognizer *)gesture{
-    
-    if (gesture.state == UIGestureRecognizerStateBegan) {
-        UITableViewCell *cell = (UITableViewCell *)[gesture view];
-        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-        NSString *s = [NSString stringWithFormat:@"row is %ld",(long)indexPath.row];
-        NSLog(@"%@", s);
-       // UIStoryboardSegue *detailSegue = [[UIStoryboardSegue alloc] initWithIdentifier:detailSegue source:self destination:DetailViewController];
-       // [self performSegueWithIdentifier:detailSegue sender:sender];
-    }
-}
 
 //decides whether to add a checkmark or take away.
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -193,6 +187,7 @@
     return filePath;
 }
 
+
 //saves the data upon termination of app
 -(void) saveData:(NSNotification *)notification{
     NSString *filePath;
@@ -203,10 +198,13 @@
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"showDetail"]) {
+    if ([segue.identifier isEqualToString:@"DestSegue"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        DetailViewController *destViewController = segue.destinationViewController;
-        NSLog(@"hi");
+        DetailViewController *destViewController = (DetailViewController *)segue.destinationViewController;
+        NSLog(@"segue prepared");
+        
+        destViewController.passDataTest = rowIs;
+       
     }
 }
 
@@ -243,5 +241,24 @@
     NSString *titleString = [foundCountString stringByAppendingString:@" States Left"];
     [_stateCountLabel setText:foundCountString]; // sets the title of the navigation controller
 }
+
+- (void) handleLongPressGestures:(UILongPressGestureRecognizer *)gesture{
+    
+    if (gesture.state == UIGestureRecognizerStateBegan) {
+        UITableViewCell *cell = (UITableViewCell *)[gesture view];
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+        NSString *stateIndexedName = [names objectAtIndex:2];
+        rowIs = [names objectAtIndex:indexPath.row];//[NSString stringWithFormat:@"row is %ld",(long)indexPath.row];
+        
+        
+        NSLog(@"%@", stateIndexedName);
+      
+        
+      //  [self prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender];
+      
+        [self performSegueWithIdentifier:@"DestSegue" sender:gesture];
+    }
+}
+
 
 @end
