@@ -17,14 +17,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *stateCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *statesLeftLabel;
 
-@property (nonatomic, strong) NSString *testString;
-
--(void)saveData:(NSNotification *)notification;
-
 @property (strong, nonatomic) IBOutlet UILongPressGestureRecognizer *longPressGestureRecognizer;
-
--(void)cellWasSwiped:(UIGestureRecognizer *)g;
-
-@property (nonatomic, strong) NSString *superTest;
 
 @end

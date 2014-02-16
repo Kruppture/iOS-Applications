@@ -32,7 +32,7 @@
 }
 
 @synthesize tableView = _tableView;
-@synthesize testString;
+
 
 - (void)viewDidLoad
 {
@@ -48,9 +48,6 @@
     [self setNeedsStatusBarAppearanceUpdate];
     [self.tableView setSeparatorColor:[UIColor grayColor]];
     [self.tableView setSeparatorInset:UIEdgeInsetsZero];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(saveData:) name:UIApplicationDidEnterBackgroundNotification object:nil];
-    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(saveData:) name:<#(NSString *)#> object:<#(id)#>]
     
     if ([[NSFileManager defaultManager] fileExistsAtPath:[self plistPath]]){
         checked = [[NSMutableArray alloc] initWithContentsOfFile:[self plistPath]];
@@ -173,13 +170,6 @@
 
 
 
--(void)cellWasSwiped:(UIGestureRecognizer *)g{
-  
-    testString = [NSString stringWithFormat:@"%i", finalCount];
-    NSLog(@"swiped");
-}
-
-
 //defines the directory of where to save the checked array
 - (NSString *)plistPath {
     NSString *homeDirectory = NSHomeDirectory();
@@ -188,18 +178,9 @@
 }
 
 
-//saves the data upon termination of app
--(void) saveData:(NSNotification *)notification{
-    NSString *filePath;
-    filePath = [self plistPath];
-    [checked writeToFile:filePath atomically:YES];
-}
-
-
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"DestSegue"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        //NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         DetailViewController *destViewController = (DetailViewController *)segue.destinationViewController;
         NSLog(@"segue prepared");
         
@@ -208,12 +189,7 @@
     }
 }
 
-//Saves the checked array upon changing of views
--(void)viewDidDisappear:(BOOL)animated{
-    NSString *filePath;
-    filePath = [self plistPath];
-    [checked writeToFile:filePath atomically:YES];
-}
+
 
 -(void)titleCountMethod{
     if ([checked containsObject:@"YES"]){
@@ -232,13 +208,7 @@
     }
     NSString *foundCountString = [NSString stringWithFormat:@"%i", finalCount];
     
-    NSDictionary *textAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
-                                    [UIColor whiteColor],NSForegroundColorAttributeName,
-                                    [UIColor whiteColor],NSBackgroundColorAttributeName,nil];
-   
-    
-    UIFont *boldFont = [UIFont fontWithName:@"HelveticaNeue" size:20];
-    NSString *titleString = [foundCountString stringByAppendingString:@" States Left"];
+  
     [_stateCountLabel setText:foundCountString]; // sets the title of the navigation controller
 }
 
@@ -247,8 +217,8 @@
     if (gesture.state == UIGestureRecognizerStateBegan) {
         UITableViewCell *cell = (UITableViewCell *)[gesture view];
         NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-        NSString *stateIndexedName = [names objectAtIndex:2];
-        rowIs = [names objectAtIndex:indexPath.row];//[NSString stringWithFormat:@"row is %ld",(long)indexPath.row];
+        NSString *stateIndexedName = [names objectAtIndex:indexPath.row];
+        rowIs = [names objectAtIndex:indexPath.row];
         
         
         NSLog(@"%@", stateIndexedName);
