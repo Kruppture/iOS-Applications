@@ -10,8 +10,6 @@
 		BB2272011788548800590DA3 /* StateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB2272001788548800590DA3 /* StateViewController.m */; };
 		BB22720517885D2D00590DA3 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB22720417885D2D00590DA3 /* DetailViewController.m */; };
 		BB48C178182C40AC001581EC /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB48C177182C40AC001581EC /* CoreData.framework */; };
-		BB48C17B182C4195001581EC /* StateData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BB48C179182C4195001581EC /* StateData.xcdatamodeld */; };
-		BB48C17E182C45E5001581EC /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = BB48C17D182C45E5001581EC /* Entity.m */; };
 		BB6A79AB18AC4EF700438124 /* plategameicon.png in Resources */ = {isa = PBXBuildFile; fileRef = BB6A79A918AC4EF700438124 /* plategameicon.png */; };
 		BB6A79B518AC4FDE00438124 /* License Plate Icon.psd in Resources */ = {isa = PBXBuildFile; fileRef = BB6A79AE18AC4FDE00438124 /* License Plate Icon.psd */; };
 		BB6A79B618AC4FDE00438124 /* License Plate IconTEST.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BB6A79AF18AC4FDE00438124 /* License Plate IconTEST.jpg */; };
@@ -21,7 +19,6 @@
 		BB6A79BA18AC4FDE00438124 /* plategameloading.png in Resources */ = {isa = PBXBuildFile; fileRef = BB6A79B318AC4FDE00438124 /* plategameloading.png */; };
 		BB6A79BB18AC4FDE00438124 /* plategameloading.psd in Resources */ = {isa = PBXBuildFile; fileRef = BB6A79B418AC4FDE00438124 /* plategameloading.psd */; };
 		BB6A79BD18AC575500438124 /* plategameiconT120.png in Resources */ = {isa = PBXBuildFile; fileRef = BB6A79BC18AC575500438124 /* plategameiconT120.png */; };
-		BB74C5A618A990BE00825126 /* plategameBG.png in Resources */ = {isa = PBXBuildFile; fileRef = BB74C5A518A990BE00825126 /* plategameBG.png */; };
 		BB74C5AA18A9978000825126 /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = BB74C5A918A9978000825126 /* gear.png */; };
 		BB80518818B0857300053F52 /* CaliforniaMain.png in Resources */ = {isa = PBXBuildFile; fileRef = BB80518718B0857300053F52 /* CaliforniaMain.png */; };
 		BB80518B18B087C200053F52 /* CaliforniaPlate.png in Resources */ = {isa = PBXBuildFile; fileRef = BB80518A18B087C200053F52 /* CaliforniaPlate.png */; };
@@ -60,9 +57,6 @@
 		BB22720317885D2D00590DA3 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		BB22720417885D2D00590DA3 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		BB48C177182C40AC001581EC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		BB48C17A182C4195001581EC /* StateData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StateData.xcdatamodel; sourceTree = "<group>"; };
-		BB48C17C182C45E5001581EC /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
-		BB48C17D182C45E5001581EC /* Entity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entity.m; sourceTree = "<group>"; };
 		BB6A79A918AC4EF700438124 /* plategameicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plategameicon.png; sourceTree = "<group>"; };
 		BB6A79AE18AC4FDE00438124 /* License Plate Icon.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "License Plate Icon.psd"; sourceTree = "<group>"; };
 		BB6A79AF18AC4FDE00438124 /* License Plate IconTEST.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "License Plate IconTEST.jpg"; sourceTree = "<group>"; };
@@ -72,8 +66,7 @@
 		BB6A79B318AC4FDE00438124 /* plategameloading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = plategameloading.png; path = "Icon Files/plategameloading.png"; sourceTree = "<group>"; };
 		BB6A79B418AC4FDE00438124 /* plategameloading.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = plategameloading.psd; sourceTree = "<group>"; };
 		BB6A79BC18AC575500438124 /* plategameiconT120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = plategameiconT120.png; path = "Icon Files/plategameiconT120.png"; sourceTree = "<group>"; };
-		BB74C5A518A990BE00825126 /* plategameBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plategameBG.png; sourceTree = "<group>"; };
-		BB74C5A918A9978000825126 /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear.png; sourceTree = "<group>"; };
+		BB74C5A918A9978000825126 /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gear.png; path = ../gear.png; sourceTree = "<group>"; };
 		BB80518718B0857300053F52 /* CaliforniaMain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CaliforniaMain.png; sourceTree = "<group>"; };
 		BB80518A18B087C200053F52 /* CaliforniaPlate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CaliforniaPlate.png; path = ../CaliforniaPlate.png; sourceTree = "<group>"; };
 		BB80518E18B0890200053F52 /* CaliforniaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CaliforniaFlag.png; path = ../CaliforniaFlag.png; sourceTree = "<group>"; };
@@ -139,10 +132,6 @@
 			children = (
 				BB2271FF1788548800590DA3 /* StateViewController.h */,
 				BB2272001788548800590DA3 /* StateViewController.m */,
-				BB6A79A918AC4EF700438124 /* plategameicon.png */,
-				BB6A79B218AC4FDE00438124 /* plategameicon120.png */,
-				BB6A79BC18AC575500438124 /* plategameiconT120.png */,
-				BB6A79B318AC4FDE00438124 /* plategameloading.png */,
 			);
 			name = "Table View";
 			sourceTree = "<group>";
@@ -202,14 +191,32 @@
 			name = "State Flags";
 			sourceTree = "<group>";
 		};
-		BBD73AF9177CD88D00116383 = {
+		BB80519118B08C5100053F52 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				BB80519218B08C6200053F52 /* Icons, BG, etc */,
+				BB80518918B0858A00053F52 /* State Data */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		BB80519218B08C6200053F52 /* Icons, BG, etc */ = {
 			isa = PBXGroup;
 			children = (
 				BB74C5A918A9978000825126 /* gear.png */,
-				BB74C5A518A990BE00825126 /* plategameBG.png */,
-				BB48C179182C4195001581EC /* StateData.xcdatamodeld */,
-				BB48C17C182C45E5001581EC /* Entity.h */,
-				BB48C17D182C45E5001581EC /* Entity.m */,
+				BBE2239018ADC40F004A60F8 /* examplecell.png */,
+				BBE2238E18ADC2B4004A60F8 /* blueimage.png */,
+				BB6A79A918AC4EF700438124 /* plategameicon.png */,
+				BB6A79B218AC4FDE00438124 /* plategameicon120.png */,
+				BB6A79BC18AC575500438124 /* plategameiconT120.png */,
+				BB6A79B318AC4FDE00438124 /* plategameloading.png */,
+			);
+			name = "Icons, BG, etc";
+			sourceTree = "<group>";
+		};
+		BBD73AF9177CD88D00116383 = {
+			isa = PBXGroup;
+			children = (
 				BBD73B0B177CD88D00116383 /* LicensePlate */,
 				BBD73B2A177CD88D00116383 /* LicensePlateTests */,
 				BBD73B04177CD88D00116383 /* Frameworks */,
@@ -241,17 +248,14 @@
 		BBD73B0B177CD88D00116383 /* LicensePlate */ = {
 			isa = PBXGroup;
 			children = (
-				BBE2239218ADC7D3004A60F8 /* iPad */,
 				BBD73B14177CD88D00116383 /* AppDelegate.h */,
 				BBD73B15177CD88D00116383 /* AppDelegate.m */,
 				BBD73B17177CD88D00116383 /* Main.storyboard */,
-				BBE2239018ADC40F004A60F8 /* examplecell.png */,
-				BBE2238E18ADC2B4004A60F8 /* blueimage.png */,
 				BB22720817886C4400590DA3 /* Main View */,
 				BB22720717886C2400590DA3 /* Table View */,
 				BB22720617886C1500590DA3 /* Detail View */,
 				BBD73B1D177CD88D00116383 /* Images.xcassets */,
-				BB80518918B0858A00053F52 /* State Data */,
+				BB80519118B08C5100053F52 /* Images */,
 				BB6A79AD18AC4FDE00438124 /* Icon Files */,
 				BBD73B0C177CD88D00116383 /* Supporting Files */,
 			);
@@ -285,13 +289,6 @@
 				BBD73B2D177CD88D00116383 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		BBE2239218ADC7D3004A60F8 /* iPad */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = iPad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,7 +373,6 @@
 				BB6A79B918AC4FDE00438124 /* plategameicon120.png in Resources */,
 				BB80518B18B087C200053F52 /* CaliforniaPlate.png in Resources */,
 				BB6A79B718AC4FDE00438124 /* plategameicon.png in Resources */,
-				BB74C5A618A990BE00825126 /* plategameBG.png in Resources */,
 				BB6A79B618AC4FDE00438124 /* License Plate IconTEST.jpg in Resources */,
 				BB6A79BA18AC4FDE00438124 /* plategameloading.png in Resources */,
 				BB6A79BD18AC575500438124 /* plategameiconT120.png in Resources */,
@@ -407,13 +403,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB48C17E182C45E5001581EC /* Entity.m in Sources */,
 				BB22720517885D2D00590DA3 /* DetailViewController.m in Sources */,
 				BBD73B1C177CD88D00116383 /* MainViewController.m in Sources */,
 				BBD73B16177CD88D00116383 /* AppDelegate.m in Sources */,
 				BBD73B12177CD88D00116383 /* main.m in Sources */,
 				BB2272011788548800590DA3 /* StateViewController.m in Sources */,
-				BB48C17B182C4195001581EC /* StateData.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,19 +626,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		BB48C179182C4195001581EC /* StateData.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				BB48C17A182C4195001581EC /* StateData.xcdatamodel */,
-			);
-			currentVersion = BB48C17A182C4195001581EC /* StateData.xcdatamodel */;
-			path = StateData.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = BBD73AFA177CD88D00116383 /* Project object */;
 }

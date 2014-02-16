@@ -8,7 +8,7 @@
 
 #import "StateViewController.h"
 #import "DetailViewController.h"
-#import "Entity.h"
+
 #import "AppDelegate.h"
 
 
