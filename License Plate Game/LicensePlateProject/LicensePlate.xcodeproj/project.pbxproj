@@ -30,7 +30,7 @@
 		BBD73B12177CD88D00116383 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD73B11177CD88D00116383 /* main.m */; };
 		BBD73B16177CD88D00116383 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD73B15177CD88D00116383 /* AppDelegate.m */; };
 		BBD73B19177CD88D00116383 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBD73B17177CD88D00116383 /* Main.storyboard */; };
-		BBD73B1C177CD88D00116383 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD73B1B177CD88D00116383 /* MainViewController.m */; };
+		BBD73B1C177CD88D00116383 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD73B1B177CD88D00116383 /* HelpViewController.m */; };
 		BBD73B1E177CD88D00116383 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBD73B1D177CD88D00116383 /* Images.xcassets */; };
 		BBD73B25177CD88D00116383 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD73B24177CD88D00116383 /* XCTest.framework */; };
 		BBD73B26177CD88D00116383 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD73B05177CD88D00116383 /* Foundation.framework */; };
@@ -81,8 +81,8 @@
 		BBD73B14177CD88D00116383 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BBD73B15177CD88D00116383 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BBD73B18177CD88D00116383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BBD73B1A177CD88D00116383 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		BBD73B1B177CD88D00116383 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		BBD73B1A177CD88D00116383 /* HelpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
+		BBD73B1B177CD88D00116383 /* HelpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
 		BBD73B1D177CD88D00116383 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BBD73B23177CD88D00116383 /* LicensePlateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LicensePlateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD73B24177CD88D00116383 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -136,13 +136,13 @@
 			name = "Table View";
 			sourceTree = "<group>";
 		};
-		BB22720817886C4400590DA3 /* Main View */ = {
+		BB22720817886C4400590DA3 /* Help View */ = {
 			isa = PBXGroup;
 			children = (
-				BBD73B1A177CD88D00116383 /* MainViewController.h */,
-				BBD73B1B177CD88D00116383 /* MainViewController.m */,
+				BBD73B1A177CD88D00116383 /* HelpViewController.h */,
+				BBD73B1B177CD88D00116383 /* HelpViewController.m */,
 			);
-			name = "Main View";
+			name = "Help View";
 			sourceTree = "<group>";
 		};
 		BB6A79AD18AC4FDE00438124 /* Icon Files */ = {
@@ -251,7 +251,7 @@
 				BBD73B14177CD88D00116383 /* AppDelegate.h */,
 				BBD73B15177CD88D00116383 /* AppDelegate.m */,
 				BBD73B17177CD88D00116383 /* Main.storyboard */,
-				BB22720817886C4400590DA3 /* Main View */,
+				BB22720817886C4400590DA3 /* Help View */,
 				BB22720717886C2400590DA3 /* Table View */,
 				BB22720617886C1500590DA3 /* Detail View */,
 				BBD73B1D177CD88D00116383 /* Images.xcassets */,
@@ -404,7 +404,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB22720517885D2D00590DA3 /* DetailViewController.m in Sources */,
-				BBD73B1C177CD88D00116383 /* MainViewController.m in Sources */,
+				BBD73B1C177CD88D00116383 /* HelpViewController.m in Sources */,
 				BBD73B16177CD88D00116383 /* AppDelegate.m in Sources */,
 				BBD73B12177CD88D00116383 /* main.m in Sources */,
 				BB2272011788548800590DA3 /* StateViewController.m in Sources */,

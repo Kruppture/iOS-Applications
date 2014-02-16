@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainViewController : UIViewController 
+@interface HelpViewController : UIViewController
 
 - (IBAction)alaskaSwitch:(id)sender;
 - (IBAction)hawaiiSwitch:(id)sender;

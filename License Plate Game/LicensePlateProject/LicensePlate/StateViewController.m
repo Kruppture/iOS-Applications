@@ -8,6 +8,7 @@
 
 #import "StateViewController.h"
 #import "DetailViewController.h"
+#import "HelpViewController.h"
 
 #import "AppDelegate.h"
 

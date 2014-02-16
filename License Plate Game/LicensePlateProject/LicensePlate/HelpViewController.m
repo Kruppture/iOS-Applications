@@ -6,14 +6,14 @@
 //  Copyright (c) 2013 Konnor Krupp. All rights reserved.
 //
 
-#import "MainViewController.h"
+#import "HelpViewController.h"
 
 
-@interface MainViewController ()
+@interface HelpViewController ()
 
 @end
 
-@implementation MainViewController {
+@implementation HelpViewController {
     
 }
 

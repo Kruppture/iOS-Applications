@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller - Help-->
+        <!--Help View Controller - Help-->
         <scene sceneID="23M-ES-dZr">
             <objects>
-                <viewController title="Help" id="eQW-N4-Hfn" customClass="MainViewController" sceneMemberID="viewController">
+                <viewController title="Help" id="eQW-N4-Hfn" customClass="HelpViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="96g-fl-w6L"/>
                         <viewControllerLayoutGuide type="bottom" id="fc1-fR-XTd"/>
@@ -301,6 +301,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Del-Gu-2jy"/>
+        <segue reference="fx7-6p-4q5"/>
     </inferredMetricsTieBreakers>
 </document>
