@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>LicensePlates</key>
+	<array/>
+	<key>States</key>
+	<array/>
+	<key>Item 0</key>
+	<string>Alabama</string>
+	<key>Item 1</key>
+	<string>Alaska</string>
+	<key>Item 2</key>
+	<string>Arizona</string>
+	<key>Item 3</key>
+	<string>Arkansas</string>
+	<key>Item 4</key>
+	<string>California</string>
+	<key>StateFlag</key>
+	<array/>
+	<key>Population</key>
+	<array/>
+	<key>MainViewPictures</key>
+	<array>
+		<string>CaliforniaMain.png</string>
+	</array>
+</dict>
+</plist>

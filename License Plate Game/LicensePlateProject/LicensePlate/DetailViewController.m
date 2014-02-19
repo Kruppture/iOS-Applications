@@ -9,35 +9,38 @@
 #import "DetailViewController.h"
 #import "StateViewController.h"
 
-@interface DetailViewController ()
+@interface DetailViewController (){
+    
+   
+    
+ 
+}
 
 @end
 
+
 @implementation DetailViewController{
     NSArray *nameArray;
+    
+  
+  
 }
-
 @synthesize passDataTest;
+@synthesize scrollView;
 
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+ 
+    [scrollView setScrollEnabled:YES];
+    [scrollView setContentSize:CGSizeMake(320, 1000)];
+    [scrollView addSubview:_contentView];
     
-    nameArray = [NSArray arrayWithObjects:@"Alabama", @"Alaska",@"Arizona", @"Arkansas", @"California", @"Colorado", @"Connecticut", @"Deleware", @"Florida", @"Georgia", @"Hawaii", @"Idaho", @"Illinois", @"Indiana", @"Iowa", @"Kansas", @"Kentucky", @"Louisiana", @"Maine", @"Maryland", @"Massachussets", @"Michigan", @"Minnesota", @"Mississippi", @"Missouri", @"Montana", @"Nebraska", @"Nevada", @"New Hampshire", @"New Jersey", @"New Mexico", @"New York", @"North Carolina", @"North Dakota", @"Ohio", @"Oklahoma", @"Oregon", @"Pennyslvania", @"Rhode Island", @"South Carolina", @"South Dakota", @"Tennessee", @"Texas", @"Utah", @"Vermont", @"Virginia", @"Washington", @"West Virginia", @"Wisconsin", @"Wyoming", nil];
+    [_testLabelTaco setText:passDataTest];
     
-    //NSString *test = [];
-   [_testLabelTaco setText:passDataTest];
-    NSLog(@"view loaded");
+ 
+    
   
 	// Do any additional setup after loading the view.
 }

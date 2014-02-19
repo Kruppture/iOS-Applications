@@ -37,8 +37,10 @@
 		BBD73B27177CD88D00116383 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD73B09177CD88D00116383 /* UIKit.framework */; };
 		BBD73B2F177CD88D00116383 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBD73B2D177CD88D00116383 /* InfoPlist.strings */; };
 		BBD73B31177CD88D00116383 /* LicensePlateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD73B30177CD88D00116383 /* LicensePlateTests.m */; };
+		BBD88E1718B45A9400A123FB /* statesdata.plist in Resources */ = {isa = PBXBuildFile; fileRef = BBD88E1618B45A9400A123FB /* statesdata.plist */; };
 		BBE2238F18ADC2B4004A60F8 /* blueimage.png in Resources */ = {isa = PBXBuildFile; fileRef = BBE2238E18ADC2B4004A60F8 /* blueimage.png */; };
 		BBE2239118ADC40F004A60F8 /* examplecell.png in Resources */ = {isa = PBXBuildFile; fileRef = BBE2239018ADC40F004A60F8 /* examplecell.png */; };
+		BBE4A1BA18B1E455006B80B4 /* scrolltestpic.png in Resources */ = {isa = PBXBuildFile; fileRef = BBE4A1B918B1E455006B80B4 /* scrolltestpic.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,8 +91,10 @@
 		BBD73B2C177CD88D00116383 /* LicensePlateTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LicensePlateTests-Info.plist"; sourceTree = "<group>"; };
 		BBD73B2E177CD88D00116383 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BBD73B30177CD88D00116383 /* LicensePlateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LicensePlateTests.m; sourceTree = "<group>"; };
+		BBD88E1618B45A9400A123FB /* statesdata.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = statesdata.plist; sourceTree = "<group>"; };
 		BBE2238E18ADC2B4004A60F8 /* blueimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueimage.png; sourceTree = "<group>"; };
 		BBE2239018ADC40F004A60F8 /* examplecell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = examplecell.png; path = "Icon Files/examplecell.png"; sourceTree = "<group>"; };
+		BBE4A1B918B1E455006B80B4 /* scrolltestpic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scrolltestpic.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,7 @@
 			children = (
 				BB22720317885D2D00590DA3 /* DetailViewController.h */,
 				BB22720417885D2D00590DA3 /* DetailViewController.m */,
+				BBE4A1B918B1E455006B80B4 /* scrolltestpic.png */,
 			);
 			name = "Detail View";
 			sourceTree = "<group>";
@@ -251,6 +256,7 @@
 				BBD73B14177CD88D00116383 /* AppDelegate.h */,
 				BBD73B15177CD88D00116383 /* AppDelegate.m */,
 				BBD73B17177CD88D00116383 /* Main.storyboard */,
+				BBD88E1618B45A9400A123FB /* statesdata.plist */,
 				BB22720817886C4400590DA3 /* Help View */,
 				BB22720717886C2400590DA3 /* Table View */,
 				BB22720617886C1500590DA3 /* Detail View */,
@@ -367,6 +373,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBD88E1718B45A9400A123FB /* statesdata.plist in Resources */,
 				BBD73B1E177CD88D00116383 /* Images.xcassets in Resources */,
 				BB6A79AB18AC4EF700438124 /* plategameicon.png in Resources */,
 				BB74C5AA18A9978000825126 /* gear.png in Resources */,
@@ -381,6 +388,7 @@
 				BB6A79BB18AC4FDE00438124 /* plategameloading.psd in Resources */,
 				BB6A79B518AC4FDE00438124 /* License Plate Icon.psd in Resources */,
 				BB6A79B818AC4FDE00438124 /* plategameicon.psd in Resources */,
+				BBE4A1BA18B1E455006B80B4 /* scrolltestpic.png in Resources */,
 				BB80518818B0857300053F52 /* CaliforniaMain.png in Resources */,
 				BBD73B10177CD88D00116383 /* InfoPlist.strings in Resources */,
 				BBE2239118ADC40F004A60F8 /* examplecell.png in Resources */,

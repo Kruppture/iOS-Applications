@@ -100,7 +100,7 @@
     self.longPressGestureRecognizer.allowableMovement = 100.0f;
     /* The user must press 2 fingers (numberOfTouchesRequired) for
      at least 1 second for the gesture to be recognized */
-    self.longPressGestureRecognizer.minimumPressDuration = 1;
+    self.longPressGestureRecognizer.minimumPressDuration = .7;
     
        /* Add this gesture recognizer to our view */
    [cell addGestureRecognizer:self.longPressGestureRecognizer];
