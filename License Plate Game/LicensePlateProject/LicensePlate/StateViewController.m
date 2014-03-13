@@ -22,18 +22,18 @@
 
 @implementation StateViewController {
     NSArray *names;
-    NSMutableArray *checked;
     int foundCount;
     int newCount;
     int tacoCount;
     int finalCount;
-    
     NSString *rowIs;
+    int stateInteger;
+    
     
 }
 
 @synthesize tableView = _tableView;
-
+@synthesize contentOffset;
 
 - (void)viewDidLoad
 {
@@ -50,22 +50,30 @@
     [self.tableView setSeparatorColor:[UIColor grayColor]];
     [self.tableView setSeparatorInset:UIEdgeInsetsZero];
     
-    if ([[NSFileManager defaultManager] fileExistsAtPath:[self plistPath]]){
-        checked = [[NSMutableArray alloc] initWithContentsOfFile:[self plistPath]];
+   if ([_yupcheck isEqual: @"yup"]) {
+        [_checked writeToFile:[self plistPath] atomically:YES];
+    } else if ([[NSFileManager defaultManager] fileExistsAtPath:[self plistPath]]){
+        _checked = [[NSMutableArray alloc] initWithContentsOfFile:[self plistPath]];
         
     } else {
-            checked = [NSMutableArray arrayWithObjects:@"NO", @"NO",@"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", nil];
+            _checked = [NSMutableArray arrayWithObjects:@"NO", @"NO",@"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", @"NO", nil];
     
     }
     
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"statesdata" ofType:@"plist"];
+    NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:path];
+    names = [dict objectForKey:@"States"];
+    /*
     names = [NSArray arrayWithObjects:@"Alabama", @"Alaska",@"Arizona", @"Arkansas", @"California", @"Colorado", @"Connecticut", @"Deleware", @"Florida", @"Georgia", @"Hawaii", @"Idaho", @"Illinois", @"Indiana", @"Iowa", @"Kansas", @"Kentucky", @"Louisiana", @"Maine", @"Maryland", @"Massachussets", @"Michigan", @"Minnesota", @"Mississippi", @"Missouri", @"Montana", @"Nebraska", @"Nevada", @"New Hampshire", @"New Jersey", @"New Mexico", @"New York", @"North Carolina", @"North Dakota", @"Ohio", @"Oklahoma", @"Oregon", @"Pennyslvania", @"Rhode Island", @"South Carolina", @"South Dakota", @"Tennessee", @"Texas", @"Utah", @"Vermont", @"Virginia", @"Washington", @"West Virginia", @"Wisconsin", @"Wyoming", nil];
-  
+  */
     tacoCount = 50;
     [self titleCountMethod];
- 
- 
+    [self.tableView setContentOffset:CGPointMake(0, contentOffset)];
+
 }
-    
+
+
     
 -(UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;
@@ -93,6 +101,7 @@
     UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
     self.longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPressGestures:)];
+ 
     self.longPressGestureRecognizer.numberOfTouchesRequired = 1;
     
     /* Maximum 100 points of movement allowed before the gesture
@@ -125,7 +134,7 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     
-    if ([[checked objectAtIndex:indexPath.row] isEqualToString:@"YES"]) {
+    if ([[_checked objectAtIndex:indexPath.row] isEqualToString:@"YES"]) {
      
         cell.contentView.backgroundColor = [UIColor colorWithRed:(26/255.0) green:(188/255.0) blue:(156/255.0) alpha:.65];
       
@@ -142,23 +151,23 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
 
-    if ([[checked objectAtIndex:indexPath.row] isEqualToString:@"NO"]) {
+    if ([[_checked objectAtIndex:indexPath.row] isEqualToString:@"NO"]) {
                 cell.contentView.backgroundColor = [UIColor colorWithRed:(46/255.0) green:(210/255.0) blue:(113/255.0) alpha:.9];
         
-        [checked replaceObjectAtIndex:indexPath.row withObject:[NSString stringWithFormat:@"YES"]];
+        [_checked replaceObjectAtIndex:indexPath.row withObject:[NSString stringWithFormat:@"YES"]];
         [self titleCountMethod];
         NSString *filePath;
         filePath = [self plistPath];
-        [checked writeToFile:filePath atomically:YES];
+        [_checked writeToFile:filePath atomically:YES];
       
     } else {
         
-        [checked replaceObjectAtIndex:indexPath.row withObject:[NSString stringWithFormat:@"NO"]];
+        [_checked replaceObjectAtIndex:indexPath.row withObject:[NSString stringWithFormat:@"NO"]];
         cell.contentView.backgroundColor = [UIColor lightGrayColor];
         [self titleCountMethod];
         NSString *filePath;
         filePath = [self plistPath];
-        [checked writeToFile:filePath atomically:YES];
+        [_checked writeToFile:filePath atomically:YES];
        
     }
     
@@ -180,25 +189,30 @@
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    contentOffset = self.tableView.contentOffset.y;
+   
     if ([segue.identifier isEqualToString:@"DestSegue"]) {
-        //NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         DetailViewController *destViewController = (DetailViewController *)segue.destinationViewController;
-        NSLog(@"segue prepared");
-        
         destViewController.passDataTest = rowIs;
-       
+        destViewController.stateint = stateInteger;
+        destViewController.cgvalue = contentOffset;
+        
+    } else {
+        HelpViewController *helpController = (HelpViewController *)segue.destinationViewController;
+        helpController.checked2 = _checked;
     }
 }
 
 
 
+//Calculates how many states are left to find
 -(void)titleCountMethod{
-    if ([checked containsObject:@"YES"]){
+    if ([_checked containsObject:@"YES"]){
         
         NSMutableArray *yesCount = [[NSMutableArray alloc] init];
         
-        for(NSString *word in checked){
-            if( [word length] == 3 ) [yesCount addObject:word];
+        for(NSString *word in _checked){
+            if([word length] == 3) [yesCount addObject:word];
         }
         int yesCountNum = [yesCount count];
         
@@ -207,20 +221,34 @@
     } else {
         finalCount = 50;
     }
+    if (finalCount == 0) {
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Congratulations!"
+                                                          message:@"You have found the license plate of every single state in the US!"
+                                                         delegate:nil
+                                                cancelButtonTitle:@"Yay!"
+                                                otherButtonTitles:nil];
+        
+        [message show];
+        NSLog(@"yay");
+    }
     NSString *foundCountString = [NSString stringWithFormat:@"%i", finalCount];
-    
-  
     [_stateCountLabel setText:foundCountString]; // sets the title of the navigation controller
 }
-
+/*
+- (void) showAlert {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Congratulations!" message:@"You found the license plate of every single state in the US!" delegate:self
+                                          cancelButtonTitle:@"Yay!"];
+    [alert show];
+}
+*/
 - (void) handleLongPressGestures:(UILongPressGestureRecognizer *)gesture{
-    
+  
     if (gesture.state == UIGestureRecognizerStateBegan) {
         UITableViewCell *cell = (UITableViewCell *)[gesture view];
         NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
         NSString *stateIndexedName = [names objectAtIndex:indexPath.row];
         rowIs = [names objectAtIndex:indexPath.row];
-        
+        stateInteger = indexPath.row;
         
         NSLog(@"%@", stateIndexedName);
       

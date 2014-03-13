@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HelpViewController : UIViewController
+@interface HelpViewController : UIViewController <UIAlertViewDelegate>
 
-- (IBAction)alaskaSwitch:(id)sender;
-- (IBAction)hawaiiSwitch:(id)sender;
-
+@property (strong,nonatomic) NSMutableArray *checked2;
+@property (strong, nonatomic) NSString *doit;
 - (IBAction)resetButton:(id)sender;
+
+-(IBAction)reviewButton:(id)sender;
 
 @end
